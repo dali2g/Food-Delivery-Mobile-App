@@ -3,28 +3,27 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import * as Icon from "react-native-feather";
-import { themeColors } from "../theme";
 import Categories from "../components/categories";
 import FeaturedRow from "../components/featuredRow";
 import { featured } from "../constants";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-[fffedd]">
       <StatusBar barStyle="dark-content" />
 
       <View className="flex-row items-center justify-center space-x-2 px-4 pb-2">
         <View className="flex-row flex-1 items-center p-3 rounded-full border border-[#dddddd] ">
-          <Icon.Search height="25" width="25" stroke="gray" />
-          <TextInput placeholder="Rechercher" className="flex-1 ml-2" />
+          <Icon.Search height="25" width="25" stroke="#ffcc70" />
+          <TextInput placeholder="Rechercher" className="flex-1 ml-2 text-[#343434]" />
           <View className="flex-row items-center space-x-1 border-0 border-l-2 pl-2 border-l-[#dddddd]">
-            <Icon.MapPin height="20" width="20" stroke="gray" />
+            <Icon.MapPin height="20" width="20" stroke="#ffcc70" />
             <Text className="text-[#343434]">Monastir</Text>
           </View>
         </View>
         <View
-          style={{ backgroundColor: themeColors.background(1) }}
-          className="p-3 ml-2 rounded-full"
+        
+          className="p-3 ml-2 rounded-full bg-[#ffcc70]"
         >
           <Icon.Sliders
             height="20"

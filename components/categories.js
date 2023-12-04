@@ -18,7 +18,7 @@ const [activeCategory,setActiveCategory] = useState(null)
  {
             categories?.map(category=>{
               let isActive = category._id==activeCategory;
-              let btnClass = isActive? ' bg-[#30475E]': ' bg-gray-200';
+              let btnClass = isActive? ' bg-[#ffcc70]': ' bg-gray-200';
               let textClass = isActive? ' font-semibold text-gray-800': ' text-gray-500';
               return(
                 <View key={category._id} className="flex justify-center items-center mr-6">
