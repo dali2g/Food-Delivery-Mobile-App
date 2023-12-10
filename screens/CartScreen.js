@@ -15,6 +15,8 @@ export default function CartScreen() {
     const [groupedItems,setGroupedItems] = useState({})
     const dispatch = useDispatch()
     const deliveryFee = 2;
+
+    
     useEffect(() => {
         const items = cartItems.reduce((group,item) =>{
             if (group[item.id]){
@@ -23,7 +25,7 @@ export default function CartScreen() {
                 group[item.id] = [item]
             }
             return group;
-        })
+        },{})
         setGroupedItems(items);
     },[cartItems])
 
